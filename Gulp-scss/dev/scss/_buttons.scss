@@ -1,0 +1,21 @@
+.btn {
+    display: inline-block;
+    padding: 18px 30px;
+    margin: 7px 0 0;
+    border-radius: 12px;
+    color: $white;
+    background: $bright-blue;
+    box-shadow: 0px 0px 20px $box-shadow;    
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;   
+    transition: all $faster-speed ease-in-out;
+    cursor: pointer;
+    &:hover {
+        color: $white;
+        background: $btn-hover;
+    }
+    &:active {
+        background: $btn-active;
+    }
+}

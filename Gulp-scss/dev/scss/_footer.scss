@@ -1,0 +1,107 @@
+footer {
+    background: $light-grey;
+
+    .footer-info {
+        text-align: center;
+        border-top: 2px solid $light-blue;
+        padding: 30px 0 39px;
+
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        &__box-contacts {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: calc(20/16); 
+
+            @media (min-width: 768px) {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        &__adress,
+        &__contacts {
+            @media (min-width: 768px) {
+                display: flex;
+                align-items: center;            
+            }
+        }
+
+        &__contacts {
+            padding: 0 0 20px;
+
+            @media (min-width: 768px) {
+                padding: 0;
+            }  
+        }
+
+        &__adress {
+            padding: 0 0 12px;
+
+            @media (min-width: 768px) {
+                padding: 0 0 20px;
+            }
+
+            >li {
+                &:nth-child(1) {
+                    color: $title-brand;
+                }
+
+                &:last-child {
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 15px; 
+                    letter-spacing: 1px;
+                    text-transform: uppercase;                        
+                }
+            }
+        }   
+
+        &__name {
+            color: $light-name;
+        }
+
+        .icon-separator:before {
+            color: $light-name;
+            font-size: 7px;
+        }
+
+        .icon-facebook:before {
+            color: $bright-blue;
+            font-size: 37px;
+        }
+
+        li {
+            padding: 0 0 10px;
+
+            @media (min-width: 768px) {
+                padding: 0 3px 0 0;
+            }
+
+            @media (min-width: 992px) {
+                padding: 0 10px 0 0;
+            }
+
+            a {
+                color: $footer-a;
+            }
+
+            &:last-child {
+                a {
+                    color: $bright-blue;
+
+                    &:hover {
+                        color: $pink;
+                    }
+                }
+            }
+        }
+    }
+    
+    .services {
+        border: none;
+    }
+}

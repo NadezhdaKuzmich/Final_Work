@@ -1,0 +1,104 @@
+.brand-container{
+    @include centerBlock (1480px, 0); 
+
+    &__title_box {
+        text-align: center;
+        padding: 55px 0 30px;
+
+        @media (min-width: 992px) {
+            padding: 53px 0 30px;
+
+        }
+        
+        h3 {
+            font-size: 14px;
+            line-height: calc(17/14);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $title-brand;  
+
+            a:hover {
+                color: $bright-blue;
+            }                    
+        }    
+    }
+    
+    .services {
+        padding: 80px 0 30px;
+    }
+
+    .brand-box {
+        display: grid;
+        grid-template-rows: repeat(6, 120px);
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 120px);
+        }
+
+        @media (min-width: 992px) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 120px);
+        }
+
+        >li {
+            text-align: center;
+            padding: 35px 0;
+
+            @media (min-width: 768px) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;       
+            }
+                
+            &:nth-child(1) {
+                background: $brand-one;
+            }
+
+            &:nth-child(2) {
+                background: $brand-two;
+            }
+
+            &:nth-child(3) {
+                background: $brand-three;
+            }
+
+            &:nth-child(4) {
+                background: $brand-four;
+            }
+
+            &:nth-child(5) {
+                background: $brand-five;
+            }
+
+            &:nth-child(6) {
+                background: $brand-six;
+            }
+
+            &:nth-child(7) {
+                background: $brand-seven;
+            }
+
+            &:nth-child(8) {
+                background: $brand-eight;
+            }
+
+            &:nth-child(9) {
+                background: $brand-nine;
+            }
+
+            &:nth-child(10) {
+                background: $brand-ten;
+            }
+
+            &:nth-child(11) {
+                background: $brand-eleven;
+            }
+
+            &:nth-child(12) {
+                background: $brand-twelve;
+            }
+        }
+    }
+}

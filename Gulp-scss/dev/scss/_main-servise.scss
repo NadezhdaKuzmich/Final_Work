@@ -1,0 +1,187 @@
+.main-servise {
+    &.services {
+        padding: 132px 0 0;
+
+        @media (min-width: 768px) {
+            padding: 280px 0 0;
+        }
+
+        @media (min-width: 992px) {
+            padding: 176px 0 0;
+        }
+        
+        .main-servise__text {
+            padding: 0; 
+        }
+    }
+
+    &__title {
+        @media (min-width: 1400px) {
+            padding: 58px 0 0;
+        }
+    }
+
+    &__text {
+        padding: 10px 0 0;       
+    }
+
+    .box-benefits {
+        display: grid;
+        padding: 0 0 61px;
+
+        @media (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 60px 0 0;
+        }
+        
+        @media (min-width: 992px) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 60px;
+            padding: 60px 0;
+        }
+
+        @media (min-width: 1400px) {
+            grid-template-columns: repeat(3, 400px);
+            grid-template-rows: repeat(2, 321px);
+        }
+
+        >li {
+            padding: 30px 0 0;
+
+            @media (min-width: 768px) {
+                width: 45%;
+                padding: 0 0 60px;            
+            }
+
+            @media (min-width: 992px) {
+                width: 100%;
+                padding: 0;            
+            }
+        }
+
+        li:nth-child(2) {
+            .card__title {
+                width: 90%;
+
+                @media (min-width: 1400px) {
+                    width: 300px;
+                }
+            }
+        }
+
+        a {
+            color: $bright-blue;
+
+            &:hover {
+                color: $pink;
+            }
+        }    
+    }
+    .card {
+        &__visual-box {
+            display: inline-block;
+            width: 92px;
+            height: 92px;
+            background: $white;
+            border-radius: 24px;
+            margin: 0 0 30px;
+
+            a {
+                vertical-align: middle;
+            }
+
+            img {
+                padding: 14px;
+            }
+        }
+
+        &__title {
+            padding: 0 0 15px;
+        }
+        
+        &__content {
+            font-size: 16px;
+            line-height: 26px; 
+        }
+    }
+}
+.service-info {
+    text-align: center;
+
+    .card {
+        padding: 0 0 30px;
+        border-bottom: 4px solid $border-card;
+        @media (min-width: 768px) {
+            padding: 0 0 60px;
+        }
+
+        &__visual-box {
+            margin: 0;
+        }     
+
+        &__content {
+            font-size: 19px;
+            line-height: 30px; 
+
+            p {
+                padding: 0 0 20px;
+            } 
+        } 
+
+        &__title {
+            padding: 28px 0;
+        }
+    }
+    .service-area {
+        text-align: left;
+        padding: 0 0 44px;
+
+        @media (min-width: 768px) {
+            padding: 0 0 60px;
+        }
+        @media (min-width: 992px) {
+            padding: 0 0 45px;
+        }
+
+        h2 {
+            font-size: 22px;
+            line-height: calc(27/22);            
+            padding: 30px 0;
+        }
+
+        .list {
+            font-size: 18px;
+            line-height: calc(26/18);
+
+            @media (min-width: 768px) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 0 60px;    
+            }
+
+            &__column {
+                >li {
+                    display: flex;
+                    align-items: baseline;
+                    padding: 0 0 15px;
+
+                    .icon-separator:before {
+                        display: inline-block;
+                        color: $pink;
+                        font-size: 7px;
+                        margin: 0 9px 0 0;
+                    }
+                }
+                &:nth-child(2) {
+                    @media (max-width: 767px) {
+                        padding: 15px 0 0;
+                    }
+                }
+            }
+        }
+    }
+}

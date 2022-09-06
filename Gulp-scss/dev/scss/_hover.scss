@@ -1,0 +1,35 @@
+.contacts {
+    >li {
+        a:hover {
+            color: $pink;
+        }    
+    }
+}
+address:hover {
+    color: $pink;
+}    
+.icon-facebook:hover:before { 
+    color: $pink !important; 
+}
+.logo {
+    transition: transform $speed ease-in-out;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+.photo {
+    transition: transform $speed ease-in-out;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+.shadows {
+    transition: box-shadow $speed ease-in-out;
+    
+    &:hover {
+        box-shadow: 2px 2px 12px $box-shadow-grey;
+    }
+}
+.border:hover {
+    box-shadow: 2px 2px 12px $border-shadow;
+}

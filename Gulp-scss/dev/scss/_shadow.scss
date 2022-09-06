@@ -1,0 +1,25 @@
+.shadow {
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    &:before,
+    &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        height: 10px;
+    }
+    &:before{
+        left: 20px;
+        right: 20px;
+        background: $shadow-one;
+        border-radius: 0px 0px 12px 12px;
+    }
+    &:after {
+        left: 40px;
+        right: 40px;
+        top: 10px;        
+        background: $shadow-two;
+        border-radius: 0px 0px 12px 12px;
+    }
+}

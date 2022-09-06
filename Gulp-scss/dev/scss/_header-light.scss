@@ -1,0 +1,69 @@
+.light {
+    position: relative;
+
+    a,
+    address {
+        color: $light-name;
+    }
+
+    address:hover {
+        color: $pink;
+    }
+
+    span {
+        color: $title-brand;
+    }
+}
+
+.header-panel {
+    &--height {
+        padding: 8px 0 0;
+
+        @media (min-width: 768px){
+            padding: 50px 0 60px;
+        }
+    }
+
+    &__box {
+        &--light {
+            @media (max-width: 767px) {
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__language {
+        &--light {
+            >li {
+                &:hover {
+                    background: $light-grey;  
+                    border-radius: 8px;    
+                }  
+            }
+        }
+    }
+
+    &__contacts {
+        .grey {
+            .icon-facebook:before {
+                content: "\e902";
+                color: $light-name;
+                font-size: 24px;
+            }
+        }
+    } 
+
+    &__menu {
+        &--blue {
+            a {
+                color: $bright-blue;
+    
+                &:hover:after{
+                    background-color: $bright-blue;
+                }   
+            }
+        }                
+    }
+}

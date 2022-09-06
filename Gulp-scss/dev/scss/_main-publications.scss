@@ -1,0 +1,173 @@
+.main-publication {
+    background: $light-grey;
+    padding: 30px 0 0;
+
+    @media (min-width: 768px) {
+        padding: 30px 0;
+    }
+
+    &--distance {
+        margin: 82px 0 0;
+    }
+
+    .text-title {
+        padding: 6px 0 30px;
+
+        @media (min-width: 1400px) {
+            padding: 10px 0 30px;
+        }
+    }
+
+    .cards {
+        @media (min-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 514px 388px;
+            grid-gap: 30px;    
+        }
+
+        @media (min-width: 992px) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            grid-gap: 20px;    
+        } 
+
+        @media (min-width: 1200px) {
+            grid-gap: 30px;    
+        } 
+
+        @media (min-width: 1400px) {
+            grid-template-columns: repeat(3, 420px);
+        }
+
+        >li {
+            padding: 0 0 30px; 
+
+            @media (min-width: 768px) {
+                padding: 0;
+
+                &:nth-child(3) {
+                    @media (max-width: 991px) {
+                        max-height: 388px;
+                        grid-column: 1/3;
+                        grid-row: 2/3; 
+                    }
+                }  
+            }  
+        }
+    }
+    
+    .hero-card {
+        height: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+        background: $white;
+
+        @media (min-width: 992px) {
+            min-height: 450px;
+        } 
+
+        &__visual {
+            overflow: hidden;
+
+            @media (min-width: 768px) {
+                max-height: 200px;  
+            } 
+
+            img {
+                min-height: 200px;
+
+                @media (min-width: 992px) {
+                    width: 420px;
+                    height: 200px;
+                }
+            }
+        }
+
+        &__body {
+            min-width: 300px;
+            font-size: 14px;
+            line-height: calc(22/14);   
+            padding: 30px; 
+
+            @media (min-width: 992px) {
+                min-width: 100%;  
+            }  
+
+            p {
+                padding: 15px 0 0;
+            }
+        } 
+
+        &__title {
+            border-bottom: 4px solid $light-blue;
+        }          
+    }          
+
+    .cards-box {
+        @media (min-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows:  repeat(3, 1fr);
+            grid-gap: 30px;    
+        }
+
+        @media (min-width: 992px) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows:  repeat(2, 1fr);
+            grid-gap: 30px;    
+        }
+        >li {
+            padding: 0 0 30px; 
+
+            @media (min-width: 768px) {
+                padding: 0;
+            }
+        }
+    }
+
+    .switch-box {
+        padding: 0 0 30px;
+
+        .switch {
+            display: flex;
+            max-width: 233px;
+            height: 42px;  
+            background: $light-blue;
+            border-radius: 12px;
+            padding: 1px 1px; 
+            margin: 0 auto; 
+
+            label {
+                color: $title-brand;            
+                font-weight: 700;
+                font-size: 16px;
+                line-height: cacl(20/16); 
+                padding: 10px 30px 10px 32px;
+                border-radius: 10px;
+                cursor: pointer;
+            } 
+
+            label:hover, 
+            #news:checked ~ label:nth-of-type(1),
+            #articles:checked ~ label:nth-of-type(2) {
+                background-color: $white;
+            }
+        }    
+    }
+
+    .publications-btn {
+        text-align: center;
+        padding: 0 0 60px;
+
+        @media (min-width: 768px) {
+            padding: 30px 0;
+
+        }
+        
+        .btn {
+            margin: 0;
+        }
+    }
+}

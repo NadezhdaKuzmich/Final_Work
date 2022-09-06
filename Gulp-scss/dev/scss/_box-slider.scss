@@ -1,0 +1,195 @@
+.box-slider {
+    padding: 50px 0 0;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: calc(46/38);
+
+    @media (min-width: 768px) {
+        font-size: 38px;
+    }
+
+    @media (min-width: 1200px) {
+        padding: 80px 0 0;
+    } 
+
+    &__slider {
+        display: flex;
+        justify-content: center;
+        height: 1087px;
+
+        @media (min-width: 550px) {
+            height: 950px;
+        } 
+
+        @media (min-width: 768px) {
+            height: 880px;
+        } 
+
+        @media (min-width: 992px) {
+            height: 528px;
+        }
+
+        @media (min-width: 1400px) {
+            height: 344px;
+        }
+
+        .slides {
+            position: absolute;
+            width: 85%;
+            max-width: 635px;
+            max-height: 1087px;
+            background: $light-grey;
+            border-radius: 12px; 
+            overflow: hidden; 
+            opacity: 0;
+            z-index: 0;
+            transform: scale(1);
+            transition: transform ease-in-out $fast-speed, opacity ease-in-out $fast-speed;
+
+            @media (min-width: 768px) {
+                max-width: 680px;
+            } 
+
+            @media (min-width: 992px) {
+                display: flex;
+                align-items: center;
+                height: inherit;
+                width: 95%;
+                max-width: 1100px;
+            }
+
+            @media (min-width: 1400px) {
+                width: 100%;
+                max-width: 1320px;
+                width: inherit;
+            }
+
+            &__visual {
+                @media (min-width: 992px) {
+                    width: 50%;
+                    overflow: hidden;
+                }
+
+                @media (min-width: 1400px) {
+                    width: 400px;
+                    overflow: hidden;
+                }
+                
+                img {
+                    width: 700px;
+                    height: 500px;
+
+                    @media (min-width: 992px) {
+                        width: 528px;
+                        height:  528px;
+                    } 
+
+                    @media (min-width: 1400px) {
+                        width: 100%;
+                        height: auto;;
+                    }
+                }
+            }
+            &__content {
+                height: 587px;
+                min-width: 320px;
+                padding: 30px 32px;
+
+                @media (min-width: 550px) {
+                    height: 450px;
+                } 
+
+                @media (min-width: 768px) {
+                    height: 380px;
+                } 
+
+                @media (min-width: 992px) {
+                    width: 50%;
+                    height: auto;
+                } 
+
+                @media (min-width: 1400px) {
+                    width: 920px;
+                    height: 344px;
+                    padding: 30px;
+                } 
+            }
+            &__title {
+                padding: 0 0 5px;
+            } 
+
+            &__text {
+                min-height: 400px;
+                padding: 0 0 30px;
+                word-break: break-word;
+                @media (min-width: 550px) {
+                    min-height: 320px;
+                } 
+
+                @media (min-width: 768px) {
+                    min-height: 230px;
+                } 
+
+                @media (min-width: 768px) {
+                    min-height: auto;
+                }
+            } 
+
+            &__name {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: calc(22/14);
+                color: $light-name;
+
+                h4 {
+                    font-size: 16px;
+                    line-height: calc(20/16);                    
+                }
+
+                p {
+                    margin: 6px 0 0;
+                }
+            } 
+        }  
+    }  
+    &__controls {
+        text-align: center;
+        padding: 17px 0 0;
+
+        label {
+            cursor: pointer;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin: 0 3px;
+            margin: 0 2px;
+            position: relative;
+            background: $bright-blue;
+            opacity: 0.2;
+            border-radius: 50%;
+
+            @media (min-width: 1400px) {
+                margin: 0 2px;
+            }
+        } 
+
+        @media (min-width: 1400px) {
+            padding: 7px 0 0;
+        }         
+    } 
+
+    #slide1:checked ~ &__slider > .slide1,
+    #slide2:checked ~ &__slider > .slide2,
+    #slide3:checked ~ &__slider > .slide3 {
+        opacity: 1;
+        z-index: 1;
+        transform: scale(1);
+    }
+    
+    label:hover, 
+    #slide1:checked ~ &__controls label:nth-of-type(1),
+    #slide2:checked ~ &__controls label:nth-of-type(2),
+    #slide3:checked ~ &__controls label:nth-of-type(3) {
+        opacity: 1;
+    }    
+}
