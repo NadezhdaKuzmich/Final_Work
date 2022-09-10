@@ -6,10 +6,6 @@
         color: $light-name;
     }
 
-    address:hover {
-        color: $pink;
-    }
-
     span {
         color: $title-brand;
     }
@@ -17,8 +13,6 @@
 
 .header-panel {
     &--height {
-        padding: 8px 0 0;
-
         @media (min-width: 768px){
             padding: 50px 0 60px;
         }
@@ -57,12 +51,21 @@
 
     &__menu {
         &--blue {
-            a {
-                color: $bright-blue;
-    
-                &:hover:after{
-                    background-color: $bright-blue;
-                }   
+            >li {
+                a {
+                    color: $bright-blue;
+                    &:hover {
+                        color: $bright-blue;
+                    }
+                    
+                    &:hover:after {
+                        background-color: $bright-blue;
+                    }  
+                    
+                    &.active:hover {
+                        color: $pink
+                    }
+                }
             }
         }                
     }

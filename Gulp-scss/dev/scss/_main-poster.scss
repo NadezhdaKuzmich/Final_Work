@@ -1,7 +1,29 @@
 .main-poster {
+    position: relative;
     color: $white;
     border-radius: 0px 0px 12px 12px;
     background: $background-gradient;
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 10px;
+    }
+    &:before{
+        top: 100%;
+        left: 20px;
+        right: 20px;
+        background: $shadow-one;
+        border-radius: 0px 0px 12px 12px;
+    }
+    &:after {
+        top: calc(100% + 10px);
+        left: 40px;
+        right: 40px;
+        background: $shadow-two;
+        border-radius: 0px 0px 12px 12px;
+    }
 }
 .logo-container {
     position: relative;

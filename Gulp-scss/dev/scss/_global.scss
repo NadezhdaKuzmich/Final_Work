@@ -173,7 +173,7 @@ label {
 .l-h {
     line-height: 37px;
 
-    @media (min-width: 1200px) {
+    @media (min-width: 768px) {
         line-height: calc(46/38);    
     }
 }

@@ -11,10 +11,12 @@
     line-height: 20px;   
     transition: all $faster-speed ease-in-out;
     cursor: pointer;
+
     &:hover {
         color: $white;
         background: $btn-hover;
     }
+    
     &:active {
         background: $btn-active;
     }

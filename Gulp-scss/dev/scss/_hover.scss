@@ -5,20 +5,19 @@
         }    
     }
 }
-address:hover {
-    color: $pink;
-}    
 .icon-facebook:hover:before { 
     color: $pink !important; 
 }
 .logo {
     transition: transform $speed ease-in-out;
+    
     &:hover {
         transform: scale(1.1);
     }
 }
 .photo {
     transition: transform $speed ease-in-out;
+
     &:hover {
         transform: scale(1.05);
     }
